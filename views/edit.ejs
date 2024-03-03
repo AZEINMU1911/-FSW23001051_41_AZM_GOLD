@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listing Details</title>
+    <link rel="stylesheet" href="/public/style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="/listing">Listings</a>
+      <a href="/create-listing">Create New Listing</a>
+    </div>
+
+    <div class="container">
+      <h1>Listing Details</h1>
+      <div>
+        <h2><%= displayName %></h2>
+        <p>Car Name: <%= carName %></p>
+        <p>Car Model: <%= carModel %></p>
+        <p>Additional Details: <%= additionalDetails %></p>
+        <button onclick="editDetails('<%= displayName %>')">Edit</button>
+      </div>
+    </div>
+
+    <script>
+      function editDetails(displayName) {
+        const newDetails = prompt("Enter new additional details:");
+        if (newDetails === null) return; // cancels
+        fetch(`/listing/${displayName}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ additionalDetails: newDetails }),
+        })
+          .then((response) => {
+            if (response.ok) {
+              console.log("Additional details updated successfully");
+              location.reload(); //refresh for change
+            } else {
+              console.error(
+                "Error updating additional details:",
+                response.statusText
+              );
+              alert("Failed to update additional details");
+            }
+          })
+          .catch((error) => {
+            console.error("Error updating additional details:", error);
+            alert("Failed to update additional details");
+          });
+      }
+    </script>
+  </body>
+</html>

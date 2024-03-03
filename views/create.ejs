@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Listing</title>
+    <link rel="stylesheet" href="/public/style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="/listing">Listings</a>
+      <a href="/create-listing">Create New Listing</a>
+    </div>
+
+    <div class="container">
+      <h2>Create New Listing</h2>
+      <form action="/create-listing" method="POST">
+        <div class="form-group">
+          <label for="displayName">Display Name:</label>
+          <input type="text" id="displayName" name="displayName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="carName">Car Name:</label>
+          <input type="text" id="carName" name="carName" required />
+        </div>
+
+        <div class="form-group">
+          <label for="carModel">Model:</label>
+          <input type="text" id="carModel" name="carModel" required />
+        </div>
+
+        <div class="form-group">
+          <label for="additionalDetails">Additional Details:</label>
+          <textarea
+            id="additionalDetails"
+            name="additionalDetails"
+            rows="4"
+            cols="50"
+          ></textarea>
+        </div>
+
+        <input type="submit" value="Create Listing" />
+      </form>
+    </div>
+  </body>
+</html>
