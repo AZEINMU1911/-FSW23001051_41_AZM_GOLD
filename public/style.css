@@ -1,0 +1,62 @@
+body {
+    background-color: peachpuff;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+
+.navbar {
+    background-color: #eebd61;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #cf0b0b;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #c87518;
+    color: black;
+}
+
+table {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    flex: 0 0 100px; /* Adjust the width as needed */
+}
+
+input[type="text"],
+textarea {
+  flex: 1;
+}
+
+input[type="file"] {
+    flex: 1;
+    width: auto; /* This is important for file input */
+}
+
+.db-data {
+    color:#11a720;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    font-family: 'Courier New', Courier, monospace;
+}
