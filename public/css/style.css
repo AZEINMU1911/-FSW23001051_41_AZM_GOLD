@@ -53,7 +53,7 @@ input[type="file"] {
 }
 
 .db-data {
-    color:#11a720;
+    color: rgb(0, 0, 0);
     font-family: 'Courier New', Courier, monospace;
 }
 
