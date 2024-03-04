@@ -8,7 +8,7 @@ const fetch = require ('fetch')
 const port = 3000;
 const app = express();
 
-app.use(express.static('public'));  //Displaying CSS still an issue 
+app.use(express.static(__dirname + '/public'));  //Displaying CSS still an issue 
 app.use(express.json());
 app.use(express.urlencoded({extended : true}));
 
