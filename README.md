@@ -4,5 +4,5 @@ This is my very first Node.js App made for BINAR's Fullstack webdeveloper bootca
   
 It is a low-level forum board-like CRUD web app.
 
-This is made on mainly Node.js, Express.js, postgresql and an :fire:urgency🔥 (cuz im bad at managing time 💀💀💀).
+This is made on mainly Node.js, Express.js, postgresql
 </p>
